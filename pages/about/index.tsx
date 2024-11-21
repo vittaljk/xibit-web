@@ -5,7 +5,7 @@ export default function About() {
     <Templates.Layout>
       <div className="h1 text-p text-white">
         <div data-aos="fade-up">
-          At x'ibit, we believe every space has the potential to be transformed
+          At xibit, we believe every space has the potential to be transformed
           into a refined, inspiring environment. Driven by a commitment to
           excellence, we work with a network of skilled designers to bring your
           vision to life—creating interiors that are not only beautiful but
@@ -24,7 +24,7 @@ export default function About() {
           results that surpass expectations.
         </div>
         <div data-aos="fade-up">
-          With x'ibit, you’re not just investing in a home makeover—you’re
+          With xibit, you’re not just investing in a home makeover—you’re
           working with a team that’s dedicated to realizing a space that
           enhances your lifestyle and brings lasting satisfaction. Let us bring
           to life a home that embodies elegance, function, and the unique warmth
