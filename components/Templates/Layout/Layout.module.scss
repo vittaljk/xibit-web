@@ -1,0 +1,17 @@
+.layoutContainer {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 5rem 1fr;
+}
+
+
+.item {
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    padding-top: 75px;
+    background: #ccc;
+    text-align: center;
+    color: #FFF;
+    font-size: 3em;
+  }
