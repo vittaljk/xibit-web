@@ -7,7 +7,7 @@ import { Head } from "../head";
 import styles from "./Layout.module.scss";
 
 import * as Organisms from "@/components/Organisms";
-import { SplashScreen } from "@/components/Organisms";
+import { SplashScreen } from "@/components/Molecules";
 
 interface LayoutProps {
   children: ReactNode;
