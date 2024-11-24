@@ -6,6 +6,6 @@ module.exports = {
   primaryText: "#333333",
   link: "#9b9b9b",
   linkHover: "#ef7f7a",
-  action: "#9b9b9b",
+  action: "#ef7f7a",
   headerBg: "rgba(0, 0, 0, 0.75)",
 };

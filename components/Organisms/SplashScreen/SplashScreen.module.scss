@@ -1,0 +1,17 @@
+.splashScreenContainer {
+    @apply flex justify-center items-center h-screen w-screen bg-gray-100 fixed top-0 left-0 z-50 transition-opacity opacity-100;
+}
+
+.logoContainer {
+    animation: pulse 1s infinite ease-in-out alternate;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.8);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}  
