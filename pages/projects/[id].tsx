@@ -29,7 +29,7 @@ export async function getStaticPaths() {
   return { paths, fallback: true }; // fallback: true enables on-demand generation
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: { params: { id: string } }) {
   // Fetch data for the project based on the ID
   const project = projects.find((p) => p.id === params.id);
 
