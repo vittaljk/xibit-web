@@ -2,7 +2,7 @@ import { FC, useState, useEffect } from "react";
 
 import styles from "./SplashScreen.module.scss";
 
-import { Logo } from "@/components/icons";
+import { XibitLogo } from "@/components/icons";
 
 interface SplashScreenProps {
   hasTimeout?: boolean; // Optional boolean for timeout control
@@ -13,7 +13,7 @@ interface SplashScreenProps {
 const SplashScreen: FC<SplashScreenProps> = ({
   hasTimeout = true,
   timeoutDuration = 2000,
-  logoSize = 150,
+  logoSize = 250,
 }) => {
   const [isVisible, setIsVisible] = useState(hasTimeout);
 
@@ -34,7 +34,8 @@ const SplashScreen: FC<SplashScreenProps> = ({
   return (
     <div className={styles.splashScreenContainer}>
       <div className={styles.logoContainer}>
-        <Logo size={logoSize} />
+        <XibitLogo size={logoSize} />
+        {/* <img alt="Logo" src="/images/logo.jpeg" /> */}
       </div>
     </div>
   );

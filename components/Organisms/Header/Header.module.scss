@@ -1,8 +1,4 @@
-// .modalContainer {
-//     [role="dialog"] {
-//         padding: 0;
-//     }
-//     div {
-//         max-height: 100%;
-//     }
-// }
+.headerContainer {
+    @apply bg-headerBg;
+    transition: opacity 0.3s ease;
+}

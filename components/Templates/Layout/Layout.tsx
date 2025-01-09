@@ -7,7 +7,7 @@ import { Head } from "../head";
 import styles from "./Layout.module.scss";
 
 import * as Organisms from "@/components/Organisms";
-import { SplashScreen } from "@/components/Molecules";
+// import { SplashScreen } from "@/components/Molecules";
 
 interface LayoutProps {
   children: ReactNode;
@@ -19,9 +19,9 @@ function Layout(props: LayoutProps) {
   return (
     <div className={styles.layoutContainer}>
       <Head />
-      <SplashScreen />
+      {/* <SplashScreen /> */}
       <Organisms.Header />
-      <div className="bg-black">
+      <div>
         <div>{children}</div>
         <Organisms.Footer />
       </div>

@@ -1,0 +1,31 @@
+.projectCard {
+    @apply transition-transform duration-500 ease-out;
+    .heroImage {
+        @apply relative w-full aspect-[4/3] overflow-hidden rounded;
+
+        img {
+            @apply absolute top-0 left-0 w-full h-full object-cover;
+        }
+    }
+
+    .projectName {
+        @apply text-lg font-bold text-white mt-1;
+    }
+
+    .projectTitle {
+        @apply text-sm font-semibold text-white;
+    }
+
+    .designCreditsContainer {
+        @apply flex mt-2 gap-x-1;
+        .designCreditsTitle {
+            @apply font-bold text-sm text-white;
+        }
+        .designCredits {
+            @apply text-sm text-gray-500;
+        }
+    }
+    &:hover {
+        @apply transform scale-110;
+    }
+}

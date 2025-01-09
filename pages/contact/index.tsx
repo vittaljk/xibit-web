@@ -4,10 +4,7 @@ import * as Molecules from "@/components/Molecules";
 export default function Contact() {
   return (
     <Templates.Layout>
-      <div>
-        Contact page.
-        <Molecules.ContactForm />
-      </div>
+      <Molecules.ContactForm />
     </Templates.Layout>
   );
 }

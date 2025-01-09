@@ -1,0 +1,6 @@
+.projectsWrapper {
+    @apply bg-black min-h-screen;
+    .projectsContainer {
+        @apply md:container mx-auto px-4 py-16 grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-x-8 gap-y-14; 
+    }
+}

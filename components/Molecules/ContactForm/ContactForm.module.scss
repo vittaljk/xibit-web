@@ -1,0 +1,6 @@
+.formWrapper {
+    @apply py-10 px-5 md:p-32;
+    .formContainer {
+        @apply grid md:grid-cols-[1fr_1fr] gap-5;
+    }
+}
