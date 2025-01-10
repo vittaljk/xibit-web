@@ -1,6 +1,4 @@
-export enum EDesignCredits {
-  Spellbound = "Spellbound",
-}
+import { IProject, EDesignCredits } from "@/components/Templates/Project";
 
 export const projects: IProject[] = [
   {
@@ -13,6 +11,7 @@ export const projects: IProject[] = [
       {
         id: "1",
         path: "/images/projects/Ishavasya/1.jpg",
+        isHeroImage: true,
       },
       {
         id: "2",
@@ -127,6 +126,7 @@ export const projects: IProject[] = [
       {
         id: "1",
         path: "/images/projects/ThePavilion/1.jpg",
+        isHeroImage: true,
       },
       {
         id: "2",
@@ -198,27 +198,80 @@ export const projects: IProject[] = [
     id: "the-new-york-loft",
     name: "The New York Loft",
     designCredits: [EDesignCredits.Spellbound],
-    heroImage: "/images/projects/TheNewYorkLoft/1.jpg",
+    heroImage: "/images/projects/TheNewYorkLoft/1.png",
     imageGallery: [
       {
         id: "1",
-        path: "/images/projects/TheNewYorkLoft/1.jpg",
+        path: "/images/projects/TheNewYorkLoft/1.png",
+        isHeroImage: true,
       },
       {
         id: "2",
-        path: "/images/projects/TheNewYorkLoft/2.jpg",
+        path: "/images/projects/TheNewYorkLoft/2.png",
       },
       {
         id: "3",
-        path: "/images/projects/TheNewYorkLoft/3.jpg",
+        path: "/images/projects/TheNewYorkLoft/3.png",
       },
       {
         id: "4",
-        path: "/images/projects/TheNewYorkLoft/4.jpg",
+        path: "/images/projects/TheNewYorkLoft/4.png",
       },
       {
         id: "5",
-        path: "/images/projects/TheNewYorkLoft/5.jpg",
+        path: "/images/projects/TheNewYorkLoft/5.png",
+      },
+      {
+        id: "6",
+        path: "/images/projects/TheNewYorkLoft/6.png",
+      },
+      {
+        id: "7",
+        path: "/images/projects/TheNewYorkLoft/7.png",
+      },
+      {
+        id: "8",
+        path: "/images/projects/TheNewYorkLoft/8.png",
+      },
+      {
+        id: "9",
+        path: "/images/projects/TheNewYorkLoft/9.png",
+      },
+      {
+        id: "10",
+        path: "/images/projects/TheNewYorkLoft/10.png",
+      },
+      {
+        id: "11",
+        path: "/images/projects/TheNewYorkLoft/11.png",
+      },
+      {
+        id: "12",
+        path: "/images/projects/TheNewYorkLoft/12.png",
+      },
+      {
+        id: "13",
+        path: "/images/projects/TheNewYorkLoft/13.png",
+      },
+      {
+        id: "14",
+        path: "/images/projects/TheNewYorkLoft/14.png",
+      },
+      {
+        id: "15",
+        path: "/images/projects/TheNewYorkLoft/15.png",
+      },
+      {
+        id: "16",
+        path: "/images/projects/TheNewYorkLoft/16.png",
+      },
+      {
+        id: "17",
+        path: "/images/projects/TheNewYorkLoft/17.png",
+      },
+      {
+        id: "18",
+        path: "/images/projects/TheNewYorkLoft/18.png",
       },
     ],
     description: [
@@ -250,19 +303,3 @@ export const projects: IProject[] = [
     ],
   },
 ];
-
-export interface IImageGallery {
-  id: string;
-  title?: string;
-  path: string;
-}
-
-export interface IProject {
-  id: string;
-  name: string;
-  designCredits?: EDesignCredits[];
-  description: string[];
-  title?: string;
-  heroImage: string;
-  imageGallery: IImageGallery[];
-}

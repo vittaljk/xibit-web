@@ -9,11 +9,14 @@ function Projects() {
   return (
     <div className={styles.projectsWrapper}>
       <div className={styles.projectsContainer}>
-        {projects.map((project) => (
-          <React.Fragment key={project.id}>
-            <ProjectCard project={project} />
-          </React.Fragment>
-        ))}
+        <h1 className={styles.projectsTitle}>Our Works</h1>
+        <div className={styles.projectsGridContainer}>
+          {projects.map((project) => (
+            <React.Fragment key={project.id}>
+              <ProjectCard project={project} />
+            </React.Fragment>
+          ))}
+        </div>
       </div>
     </div>
   );

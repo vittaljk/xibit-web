@@ -3,8 +3,12 @@ import * as Templates from "@/components/Templates";
 export default function About() {
   return (
     <Templates.Layout>
-      <div className="h1 text-p">
-        <div data-aos="fade-up" data-aos-delay="600">
+      <div className="h1 text-pp-6 md:container md:mx-auto md:px-4 md:py-16">
+        {/* <div className="bg-red-600">
+          <img alt="Logo" src="/images/logo.jpeg" width="300" />
+        </div>
+        <img alt="Logo" src="/images/latest-logo.jpeg" width="300" /> */}
+        <div className="mb-4" data-aos="fade-up">
           At x'ibit, we believe every space has the potential to be transformed
           into a refined, inspiring environment. Driven by a commitment to
           excellence, we work with a network of skilled designers to bring your
@@ -14,7 +18,7 @@ export default function About() {
           thoughtfully from the outset, incorporating the needs and unique
           tastes of those who live in them.
         </div>
-        <div data-aos="fade-up" data-aos-delay="600">
+        <div className="mb-4" data-aos="fade-up">
           Every project we undertake is a partnership, where we carefully match
           you with a designer who understands your style and vision. From there,
           our team expertly handles the execution, managing every step of the
@@ -23,7 +27,7 @@ export default function About() {
           designer’s intent, we prioritize quality and adaptability, delivering
           results that surpass expectations.
         </div>
-        <div data-aos="fade-up" data-aos-delay="600">
+        <div className="mb-4" data-aos="fade-up">
           With x'ibit, you’re not just investing in a home makeover—you’re
           working with a team that’s dedicated to realizing a space that
           enhances your lifestyle and brings lasting satisfaction. Let us bring

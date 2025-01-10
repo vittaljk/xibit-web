@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 
-import { projects, IProject } from "@/data";
+import { projects } from "@/data";
+import { IProject } from "@/components/Templates/Project";
 import * as Templates from "@/components/Templates";
 
 const ProjectPage = (props: { project: IProject }) => {

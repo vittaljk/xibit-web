@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import styles from "./ProjectCard.module.scss";
 
-import { IProject } from "@/data";
+import { IProject } from "@/components/Templates/Project";
 
 interface ProjectProps {
   project: IProject;

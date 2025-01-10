@@ -27,11 +27,13 @@ function Header() {
       className={styles.headerContainer}
       style={{ opacity, position: "sticky", top: 0, zIndex: 1000 }}
     >
-      <div className="container mx-auto p-0 md:px-4 h-14 md:h-20 block md:flex items-center justify-between">
-        <div className="text-white">header content</div>
+      <div className="container mx-auto p-0 md:px-4 h-14 md:h-20 block md:flex items-center justify-between text-white">
+        <div>Menu</div>
         <Link href="/">Home</Link>
         <Link href="/about">About</Link>
         <Link href="/contact">Contact</Link>
+        <Link href="/projects">Projects</Link>
+        <img alt="Logo" className="h-20" src="/images/logo.jpeg" />
       </div>
     </div>
   );

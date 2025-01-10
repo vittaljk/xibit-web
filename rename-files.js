@@ -2,10 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 // Define the folder containing the images
-const folderPath = path.join(
-  __dirname,
-  "public/images/projects/TheNewYorkLoft",
-);
+const folderPath = path.join(__dirname, "public/images/projects/Ishavasya");
 
 fs.readdir(folderPath, (err, files) => {
   if (err) {
