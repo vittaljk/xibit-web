@@ -6,92 +6,93 @@ export const projects: IProject[] = [
     name: "Ishavasya",
     title: "where the Lord Resides",
     designCredits: [EDesignCredits.Spellbound],
-    heroImage: "/images/projects/Ishavasya/1.jpg",
+    heroImage:
+      "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618712/1_p656zm.jpg",
     imageGallery: [
       {
         id: "1",
-        path: "/images/projects/Ishavasya/1.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618712/1_p656zm.jpg",
         isHeroImage: true,
       },
       {
         id: "2",
-        path: "/images/projects/Ishavasya/2.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618710/2_pdmla2.jpg",
       },
       {
         id: "3",
-        path: "/images/projects/Ishavasya/3.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618714/8_yja0q1.jpg",
       },
       {
         id: "4",
-        path: "/images/projects/Ishavasya/4.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618706/4_jwjoeo.jpg",
       },
       {
         id: "5",
-        path: "/images/projects/Ishavasya/5.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618696/5_e430m6.jpg",
       },
       {
         id: "6",
-        path: "/images/projects/Ishavasya/6.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618710/6_lykgvi.jpg",
       },
       {
         id: "7",
-        path: "/images/projects/Ishavasya/7.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618701/7_lrykk7.jpg",
       },
       {
         id: "8",
-        path: "/images/projects/Ishavasya/8.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618714/8_yja0q1.jpg",
       },
       {
         id: "9",
-        path: "/images/projects/Ishavasya/9.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618727/9_yyrqiy.jpg",
       },
       {
         id: "10",
-        path: "/images/projects/Ishavasya/10.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618724/10_afcw2e.jpg",
       },
       {
         id: "11",
-        path: "/images/projects/Ishavasya/11.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618711/11_gzpesb.jpg",
       },
       {
         id: "12",
-        path: "/images/projects/Ishavasya/12.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618716/12_gwhmyo.jpg",
       },
       {
         id: "13",
-        path: "/images/projects/Ishavasya/13.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618720/13_wzm7d5.jpg",
       },
       {
         id: "14",
-        path: "/images/projects/Ishavasya/14.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618730/14_ytcbgm.jpg",
       },
       {
         id: "15",
-        path: "/images/projects/Ishavasya/15.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618723/15_aw4dqg.jpg",
       },
       {
         id: "16",
-        path: "/images/projects/Ishavasya/16.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618724/16_aarczw.jpg",
       },
       {
         id: "17",
-        path: "/images/projects/Ishavasya/17.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618725/17_glwb7l.jpg",
       },
       {
         id: "18",
-        path: "/images/projects/Ishavasya/18.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618726/18_jkmumq.jpg",
       },
       {
         id: "19",
-        path: "/images/projects/Ishavasya/19.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618728/19_aynqn8.jpg",
       },
       {
         id: "20",
-        path: "/images/projects/Ishavasya/20.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618730/20_dpzmsr.jpg",
       },
       {
         id: "21",
-        path: "/images/projects/Ishavasya/21.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618729/21_mpea9f.jpg",
       },
     ],
     description: [
@@ -121,60 +122,61 @@ export const projects: IProject[] = [
     id: "the-pavilion",
     name: "The Pavilion",
     designCredits: [EDesignCredits.Spellbound],
-    heroImage: "/images/projects/ThePavilion/1.jpg",
+    heroImage:
+      "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736619201/1_wgpjrj.jpg",
     imageGallery: [
       {
         id: "1",
-        path: "/images/projects/ThePavilion/1.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736619201/1_wgpjrj.jpg",
         isHeroImage: true,
       },
       {
         id: "2",
-        path: "/images/projects/ThePavilion/2.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736619219/2_idrsy7.jpg",
       },
       {
         id: "3",
-        path: "/images/projects/ThePavilion/3.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736619219/3_zjpcl0.jpg",
       },
       {
         id: "4",
-        path: "/images/projects/ThePavilion/4.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736619203/4_dz9ctc.jpg",
       },
       {
         id: "5",
-        path: "/images/projects/ThePavilion/5.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736619213/5_xqaf06.jpg",
       },
       {
         id: "6",
-        path: "/images/projects/ThePavilion/6.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736619212/6_igcbor.jpg",
       },
       {
         id: "7",
-        path: "/images/projects/ThePavilion/7.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736619208/7_kzmwyx.jpg",
       },
       {
         id: "8",
-        path: "/images/projects/ThePavilion/8.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736619224/8_re5kkk.jpg",
       },
       {
         id: "9",
-        path: "/images/projects/ThePavilion/9.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736619212/9_wxvac2.jpg",
       },
       {
         id: "10",
-        path: "/images/projects/ThePavilion/10.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736619218/10_t64nrj.jpg",
       },
       {
         id: "11",
-        path: "/images/projects/ThePavilion/11.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736619217/11_ko3psn.jpg",
       },
       {
         id: "12",
-        path: "/images/projects/ThePavilion/12.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736619224/12_o6ysb5.jpg",
       },
       {
         id: "13",
-        path: "/images/projects/ThePavilion/13.jpg",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736619224/13_wp5i4b.jpg",
       },
     ],
     description: [
@@ -198,80 +200,41 @@ export const projects: IProject[] = [
     id: "the-new-york-loft",
     name: "The New York Loft",
     designCredits: [EDesignCredits.Spellbound],
-    heroImage: "/images/projects/TheNewYorkLoft/1.png",
+    heroImage:
+      "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618868/7_kmh7lx.png",
     imageGallery: [
       {
         id: "1",
-        path: "/images/projects/TheNewYorkLoft/1.png",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618860/1_oas3le.png",
         isHeroImage: true,
       },
       {
         id: "2",
-        path: "/images/projects/TheNewYorkLoft/2.png",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618857/2_nipkfc.png",
       },
       {
         id: "3",
-        path: "/images/projects/TheNewYorkLoft/3.png",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618861/3_y4al66.png",
       },
       {
         id: "4",
-        path: "/images/projects/TheNewYorkLoft/4.png",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618852/4_c09hqn.png",
       },
       {
         id: "5",
-        path: "/images/projects/TheNewYorkLoft/5.png",
-      },
-      {
-        id: "6",
-        path: "/images/projects/TheNewYorkLoft/6.png",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618868/5_wryyux.png",
       },
       {
         id: "7",
-        path: "/images/projects/TheNewYorkLoft/7.png",
-      },
-      {
-        id: "8",
-        path: "/images/projects/TheNewYorkLoft/8.png",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618868/7_kmh7lx.png",
       },
       {
         id: "9",
-        path: "/images/projects/TheNewYorkLoft/9.png",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618868/9_wpg4g2.png",
       },
       {
         id: "10",
-        path: "/images/projects/TheNewYorkLoft/10.png",
-      },
-      {
-        id: "11",
-        path: "/images/projects/TheNewYorkLoft/11.png",
-      },
-      {
-        id: "12",
-        path: "/images/projects/TheNewYorkLoft/12.png",
-      },
-      {
-        id: "13",
-        path: "/images/projects/TheNewYorkLoft/13.png",
-      },
-      {
-        id: "14",
-        path: "/images/projects/TheNewYorkLoft/14.png",
-      },
-      {
-        id: "15",
-        path: "/images/projects/TheNewYorkLoft/15.png",
-      },
-      {
-        id: "16",
-        path: "/images/projects/TheNewYorkLoft/16.png",
-      },
-      {
-        id: "17",
-        path: "/images/projects/TheNewYorkLoft/17.png",
-      },
-      {
-        id: "18",
-        path: "/images/projects/TheNewYorkLoft/18.png",
+        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618865/10_vdvfbi.png",
       },
     ],
     description: [

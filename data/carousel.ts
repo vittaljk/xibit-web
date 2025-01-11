@@ -5,15 +5,18 @@ export interface ICarouselItem {
 
 export const carouselItems: ICarouselItem[] = [
   {
-    imagePath: "/images/projects/Ishavasya/1.jpg",
-    caption: "Image 1",
+    imagePath:
+      "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618712/1_p656zm.jpg",
+    caption: "Ishavasya",
   },
   {
-    imagePath: "/images/projects/TheNewYorkLoft/1.png",
-    caption: "Image 2",
+    imagePath:
+      "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736619201/1_wgpjrj.jpg",
+    caption: "The Pavilion",
   },
   {
-    imagePath: "/images/projects/ThePavilion/1.jpg",
-    caption: "Image 3",
+    imagePath:
+      "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618868/7_kmh7lx.png",
+    caption: "The New York Loft",
   },
 ];
