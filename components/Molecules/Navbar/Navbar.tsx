@@ -4,12 +4,18 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "@nextui-org/dropdown";
-import Link from "next/link";
+import { useRouter } from "next/router";
 
 import { HamMenuIcon } from "@/components/icons";
 import { navMenuItems } from "@/data";
 
 function Navbar() {
+  const router = useRouter();
+
+  const handleNavigate = (href: string) => {
+    router.push(href);
+  };
+
   return (
     <Dropdown>
       <DropdownTrigger>
@@ -19,10 +25,8 @@ function Navbar() {
       </DropdownTrigger>
       <DropdownMenu aria-label="Navigation Menu">
         {navMenuItems.map((item) => (
-          <DropdownItem key={item.id}>
-            <Link className="w-full h-full block" href={item.href}>
-              {item.title}
-            </Link>
+          <DropdownItem key={item.id} onClick={() => handleNavigate(item.href)}>
+            {item.title}
           </DropdownItem>
         ))}
       </DropdownMenu>
