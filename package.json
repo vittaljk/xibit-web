@@ -6,7 +6,6 @@
 		"dev": "next dev --turbo",
 		"build": "next build",
 		"start": "next start",
-		"install": "npm install --legacy-peer-deps",
 		"lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix"
 	},
 	"dependencies": {
