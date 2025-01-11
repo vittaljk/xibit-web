@@ -26,6 +26,6 @@
         }
     }
     &:hover {
-        @apply transform scale-110;
+        @apply md:transform md:scale-110;
     }
 }

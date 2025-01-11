@@ -8,9 +8,6 @@ interface ProjectProps {
   project: IProject;
 }
 
-// TODO: aos
-// hover scale animation
-
 function ProjectCard(props: ProjectProps) {
   const {
     project: { id, heroImage, name, title, designCredits },
