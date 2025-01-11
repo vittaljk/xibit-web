@@ -1,0 +1,9 @@
+.logoContainer {
+    @apply h-full;
+    img {
+        max-height: 100%;
+        width: 150px;
+        height: auto;
+        max-width: 100%;
+    }
+}

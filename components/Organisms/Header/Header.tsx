@@ -1,7 +1,8 @@
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import styles from "./Header.module.scss";
+
+import * as Molecules from "@/components/Molecules";
 
 function Header() {
   const [opacity, setOpacity] = useState(1);
@@ -24,17 +25,16 @@ function Header() {
 
   return (
     <div
-      className={styles.headerContainer}
+      className={styles.headerWrapper}
       style={{ opacity, position: "sticky", top: 0, zIndex: 1000 }}
     >
-      <div className="container mx-auto p-0 md:px-4 h-14 md:h-20 block md:flex items-center justify-between text-white">
-        {/* <div>Menu</div> */}
-        <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-        <Link href="/contact">Contact</Link>
-        <Link href="/projects">Projects</Link>
-        <div className="hidden md:block">
-          <img alt="Logo" className="h-20" src="/images/logo.jpeg" />
+      <div className={styles.headerContainer}>
+        <div className={styles.leftContainer}>
+          <Molecules.Navbar />
+          <Molecules.Breadcrumb />
+        </div>
+        <div className={styles.rightContainer}>
+          <Molecules.Logo />
         </div>
       </div>
     </div>
