@@ -4,6 +4,12 @@
 
 .galleryItem {
     @apply mb-4;
+    img {
+        @apply mb-4 cursor-pointer transition-transform duration-500 ease-out;
+        &:hover {
+            @apply md:transform md:scale-110;
+        }
+    }
 }
 
 .image {

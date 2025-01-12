@@ -1,34 +1,10 @@
-// import { IImageGalleryPicture } from "./ImageGallery.model";
-// import styles from "./ImageGallery.module.scss";
-
-// interface ImageGalleryProps {
-//   imageGallery: IImageGalleryPicture[];
-// }
-
-// function ImageGallery(props: ImageGalleryProps) {
-//   const { imageGallery } = props;
-
-//   return (
-//     <div className={styles.gallery}>
-//       {imageGallery.map((image) => (
-//         <div key={image.id} className={styles.galleryItem} data-aos="fade-up">
-//           <img
-//             alt={image.title || "Image"}
-//             className={styles.image}
-//             src={image.path}
-//           />
-//           {image.title && <p className={styles.title}>{image.title}</p>}
-//         </div>
-//       ))}
-//     </div>
-//   );
-// }
-
-// export default ImageGallery;
-
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState, lazy, Suspense } from "react";
+import { useDisclosure } from "@nextui-org/react";
+import { Modal, ModalContent, ModalHeader, ModalBody } from "@nextui-org/modal";
 
 import styles from "./ImageGallery.module.scss";
+
+const Carousel = lazy(() => import("@/components/Molecules/Carousel"));
 
 export interface IImageGalleryPicture {
   id: string;
@@ -42,6 +18,12 @@ interface ImageGalleryProps {
 
 function ImageGallery({ imageGallery }: ImageGalleryProps) {
   const galleryRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState<number>(0); // Track the active image index
+  const {
+    isOpen: isGalleryModalOpen,
+    onOpen: onGalleryModalOpen,
+    onClose: onGalleryModalClose,
+  } = useDisclosure();
 
   useEffect(() => {
     if (galleryRef.current) {
@@ -69,19 +51,61 @@ function ImageGallery({ imageGallery }: ImageGalleryProps) {
     }
   }, [imageGallery]);
 
+  function handleImageClick(index: number) {
+    setActiveIndex(index); // Set the active image index
+    onGalleryModalOpen();
+  }
+
   return (
-    <div ref={galleryRef} className={styles.gallery}>
-      {imageGallery.map((image) => (
-        <div key={image.id} className={styles.galleryItem} data-aos="fade-up">
-          <img
-            alt={image.title || "Gallery Image"}
-            className={styles.image}
-            src={image.path}
-          />
-          {image.title && <p className={styles.title}>{image.title}</p>}
-        </div>
-      ))}
-    </div>
+    <>
+      <div ref={galleryRef} className={styles.gallery}>
+        {imageGallery.map((image, index) => (
+          <div
+            key={image.id}
+            className={styles.galleryItem}
+            data-aos="fade-up"
+            onClick={() => handleImageClick(index)}
+          >
+            <img
+              alt={image.title || "Gallery Image"}
+              className={styles.image}
+              src={image.path}
+            />
+            {image.title && <p className={styles.title}>{image.title}</p>}
+          </div>
+        ))}
+      </div>
+      <Modal
+        isOpen={isGalleryModalOpen}
+        size="full"
+        onClose={onGalleryModalClose}
+      >
+        <ModalContent>
+          {() => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">
+                Image Gallery
+              </ModalHeader>
+              <ModalBody>
+                <Suspense fallback={<div>Loading carousel...</div>}>
+                  <Carousel
+                    showIndicators
+                    activeIndex={activeIndex}
+                    autoPlay={false}
+                    carouselItems={imageGallery.map((image) => ({
+                      imagePath: image.path,
+                      title: image.title || "",
+                    }))}
+                    heightClass="full"
+                    showArrows={true}
+                  />
+                </Suspense>
+              </ModalBody>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
+    </>
   );
 }
 

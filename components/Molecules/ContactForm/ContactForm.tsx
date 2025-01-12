@@ -63,16 +63,12 @@ const ContactForm: React.FC = () => {
       <div className={styles.formContainer}>
         <div>
           <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
-          <p className="font-medium text-lg">
-            Where Design Meets Impeccable Execution
+
+          <p className="font-extrabold text-lg  flex items-center space-x-2">
+            <span>✨</span> <span>Where Design Meets Impeccable Execution</span>{" "}
+            <span>✨</span>
           </p>
-          <div className="py-4">
-            <p className="font-bold text-sm">Address</p>
-            <p className="text-xs">
-              6, Venkatesh Bhavan, DVG Road, Gandhi Bazar, Basavanagudi,
-              Bangalore 560004
-            </p>
-          </div>
+
           <div className="py-4">
             <div className="flex gap-2 items-center">
               <p className="font-bold text-sm">Call us on</p>

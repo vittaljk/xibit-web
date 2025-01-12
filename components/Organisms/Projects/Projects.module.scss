@@ -3,7 +3,7 @@
     .projectsContainer {
         @apply md:container mx-auto px-4 py-16; 
         .projectsTitle {
-            @apply text-4xl font-bold mb-4 text-white mb-8;
+            @apply text-4xl font-bold mb-4 text-white md:mb-8;
         }
         .projectsGridContainer {
             @apply grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-x-8 gap-y-14

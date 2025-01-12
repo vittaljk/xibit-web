@@ -26,7 +26,7 @@ function Header() {
   return (
     <div
       className={styles.headerWrapper}
-      style={{ opacity, position: "sticky", top: 0, zIndex: 1000 }}
+      style={{ opacity, position: "sticky", top: 0, zIndex: 9 }}
     >
       <div className={styles.headerContainer}>
         <div className={styles.leftContainer}>

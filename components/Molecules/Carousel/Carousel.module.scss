@@ -1,5 +1,11 @@
 .carouselWrapper {
-    @apply relative h-72 md:h-96;
+    @apply relative;
+    &.empty {
+        @apply h-72 md:h-96;
+    }
+    &.full {
+        height: calc(100vh - 100px);
+    }
     .overlay {
         @apply absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-10;
       }
