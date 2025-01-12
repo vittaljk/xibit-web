@@ -3,7 +3,7 @@ import styles from "./Logo.module.scss";
 function Logo() {
   return (
     <div className={styles.logoContainer}>
-      <img alt="Logo" src="/images/logo.jpeg" />
+      <img alt="Logo" src="/images/xibit-logo-white.png" />
     </div>
   );
 }
