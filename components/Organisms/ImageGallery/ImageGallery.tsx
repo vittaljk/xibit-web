@@ -53,7 +53,8 @@ function ImageGallery({ imageGallery }: ImageGalleryProps) {
 
   function handleImageClick(index: number) {
     setActiveIndex(index); // Set the active image index
-    onGalleryModalOpen();
+    // TODO: under progress
+    // onGalleryModalOpen();
   }
 
   return (

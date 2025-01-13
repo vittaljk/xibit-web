@@ -6,7 +6,8 @@
 		"dev": "next dev --turbo",
 		"build": "npm install --legacy-peer-deps && next build",
 		"start": "next start",
-		"lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix"
+		"lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix",
+		"build:static": "next build && next export"
 	},
 	"dependencies": {
 		"@nextui-org/breadcrumbs": "^2.2.6",
