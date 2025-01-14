@@ -12,9 +12,9 @@ const ContactForm: React.FC = () => {
       firstName: "",
       lastName: "",
       email: "",
+      handPhone: "",
       companyName: "",
       designation: "",
-      handPhone: "",
       message: "",
     },
     validationSchema: Yup.object({
@@ -23,38 +23,41 @@ const ContactForm: React.FC = () => {
       email: Yup.string()
         .email("Invalid email format")
         .required("Email is required"),
-      companyName: Yup.string().required("Company Name is required"),
-      designation: Yup.string().required("Designation is required"),
       handPhone: Yup.string()
         .matches(/^[0-9]+$/, "Must be only digits")
         .required("Hand Phone is required"),
-      message: Yup.string().required("Message is required"),
+      companyName: Yup.string(),
+      designation: Yup.string(),
+      message: Yup.string(),
     }),
     onSubmit: async (values) => {
-      try {
-        const response = await fetch("/api/contact", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(values),
-        });
+      console.log("values", values);
+      // TODO: need to connect to API or email service to send the form data
 
-        if (!response.ok) {
-          const errorData = await response.json();
+      // try {
+      //   const response = await fetch("/api/contact", {
+      //     method: "POST",
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //     },
+      //     body: JSON.stringify(values),
+      //   });
 
-          console.error("Error:", errorData);
-          alert(
-            "Failed to submit form: " + (errorData.message || "Unknown error"),
-          );
-        } else {
-          const responseData = await response.json();
+      //   if (!response.ok) {
+      //     const errorData = await response.json();
 
-          console.log("Success:", responseData);
-        }
-      } catch (error) {
-        console.error("Error:", error);
-      }
+      //     console.error("Error:", errorData);
+      //     alert(
+      //       "Failed to submit form: " + (errorData.message || "Unknown error"),
+      //     );
+      //   } else {
+      //     const responseData = await response.json();
+
+      //     console.log("Success:", responseData);
+      //   }
+      // } catch (error) {
+      //   console.error("Error:", error);
+      // }
     },
   });
 
@@ -138,6 +141,25 @@ const ContactForm: React.FC = () => {
             />
           </div>
 
+          {/* Hand Phone */}
+          <div>
+            <Input
+              fullWidth
+              classNames={{
+                errorMessage: "text-red-500 absolute right-0 top-0",
+              }}
+              errorMessage={formik.touched.handPhone && formik.errors.handPhone}
+              isInvalid={
+                formik.touched.handPhone && Boolean(formik.errors.handPhone)
+              }
+              label="Hand Phone"
+              name="handPhone"
+              value={formik.values.handPhone}
+              onBlur={formik.handleBlur}
+              onChange={formik.handleChange}
+            />
+          </div>
+
           {/* Company Name */}
           <div>
             <Input
@@ -180,25 +202,6 @@ const ContactForm: React.FC = () => {
             />
           </div>
 
-          {/* Hand Phone */}
-          <div>
-            <Input
-              fullWidth
-              classNames={{
-                errorMessage: "text-red-500 absolute right-0 top-0",
-              }}
-              errorMessage={formik.touched.handPhone && formik.errors.handPhone}
-              isInvalid={
-                formik.touched.handPhone && Boolean(formik.errors.handPhone)
-              }
-              label="Hand Phone"
-              name="handPhone"
-              value={formik.values.handPhone}
-              onBlur={formik.handleBlur}
-              onChange={formik.handleChange}
-            />
-          </div>
-
           {/* Message */}
           <div>
             <Textarea
@@ -218,9 +221,14 @@ const ContactForm: React.FC = () => {
             />
           </div>
 
-          <div>
-            <Button color="secondary" type="submit">
-              Submit
+          <div className="mt-8">
+            <Button
+              className="w-full"
+              color="secondary"
+              size="lg"
+              type="submit"
+            >
+              <span className="text-white">Submit</span>
             </Button>
           </div>
         </div>

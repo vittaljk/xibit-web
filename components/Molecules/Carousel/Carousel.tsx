@@ -5,6 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import defaul
 import styles from "./Carousel.module.scss";
 import { ICarouselProps } from "./Carousel.model";
 
+import * as Atoms from "@/components/Atoms";
 import { homeCarouselItems } from "@/data";
 
 function Carousel(prop: ICarouselProps) {
@@ -17,6 +18,7 @@ function Carousel(prop: ICarouselProps) {
     autoPlay = true,
     infiniteLoop = true,
     heightClass = "empty",
+    lazyLoadImages = false,
   } = prop;
 
   return (
@@ -35,11 +37,7 @@ function Carousel(prop: ICarouselProps) {
           key={index}
           className={`${styles.carouselWrapper} ${styles[heightClass]}`}
         >
-          <img
-            alt="project"
-            className={styles.carouselImage}
-            src={carouselItem.imagePath}
-          />
+          <Atoms.Image lazy={lazyLoadImages} path={carouselItem.imagePath} />
           <div className={styles.overlay} />
         </div>
       ))}

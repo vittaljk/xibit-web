@@ -4,6 +4,8 @@ import { Modal, ModalContent, ModalHeader, ModalBody } from "@nextui-org/modal";
 
 import styles from "./ImageGallery.module.scss";
 
+import * as Atoms from "@/components/Atoms";
+
 const Carousel = lazy(() => import("@/components/Molecules/Carousel"));
 
 export interface IImageGalleryPicture {
@@ -66,11 +68,7 @@ function ImageGallery({ imageGallery }: ImageGalleryProps) {
             data-aos="fade-up"
             onClick={() => handleImageClick(index)}
           >
-            <img
-              alt={image.title || "Gallery Image"}
-              className={styles.image}
-              src={image.path}
-            />
+            <Atoms.Image lazy={true} path={image.path} />
             {image.title && <p className={styles.title}>{image.title}</p>}
           </div>
         ))}
@@ -97,6 +95,7 @@ function ImageGallery({ imageGallery }: ImageGalleryProps) {
                       title: image.title || "",
                     }))}
                     heightClass="full"
+                    lazyLoadImages={true}
                     showArrows={true}
                   />
                 </Suspense>

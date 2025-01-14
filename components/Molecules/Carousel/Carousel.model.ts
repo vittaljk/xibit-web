@@ -9,4 +9,5 @@ export interface ICarouselProps {
   autoPlay?: boolean;
   infiniteLoop?: boolean;
   heightClass?: string;
+  lazyLoadImages?: boolean;
 }
