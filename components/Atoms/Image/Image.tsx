@@ -40,9 +40,10 @@ function Image(props: IImageProps) {
         // src={optimizedSrc}
         alt={alt}
         className={styles.image}
-        height={height}
+        // height={height}
+        loading={lazy ? "lazy" : "eager"}
         src={path}
-        width={width}
+        // width={width}
       />
     </div>
   );
