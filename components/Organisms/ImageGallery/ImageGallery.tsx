@@ -52,9 +52,8 @@ function ImageGallery({ imageGallery }: ImageGalleryProps) {
   }, [imageGallery]);
 
   function handleImageClick(index: number) {
-    setActiveIndex(index); // Set the active image index
-    // TODO: under progress
-    // onGalleryModalOpen();
+    setActiveIndex(index);
+    onGalleryModalOpen();
   }
 
   return (
