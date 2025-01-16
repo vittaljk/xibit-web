@@ -2,7 +2,6 @@ import styles from "./AboutUs.module.scss";
 
 function AboutUs() {
   return (
-    // <div className="h1 text-pp-6 md:container md:mx-auto md:px-4 md:py-16">
     <div className={styles.aboutUsWrapper}>
       <h1 className={styles.aboutUsTitle}>About Us</h1>
       <div className="mx-5 mt-9 md:mx-0">

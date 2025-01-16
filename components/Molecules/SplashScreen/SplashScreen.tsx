@@ -11,7 +11,7 @@ interface SplashScreenProps {
 const SplashScreen: FC<SplashScreenProps> = ({
   hasTimeout = true,
   timeoutDuration = 3000,
-  logoSize = 250,
+  // logoSize = 300,
 }) => {
   const [isVisible, setIsVisible] = useState(hasTimeout);
 
@@ -35,8 +35,8 @@ const SplashScreen: FC<SplashScreenProps> = ({
         <div className={styles.logoContainer}>
           <img
             alt="Logo"
+            className={styles.logoImage}
             src="/images/xibit-logo-transparent.png"
-            width="300"
           />
         </div>
       </div>

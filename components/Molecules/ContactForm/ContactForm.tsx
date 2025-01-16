@@ -1,12 +1,26 @@
-import React from "react";
+import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Button } from "@nextui-org/button";
 import { Input, Textarea } from "@nextui-org/input";
+import { Alert } from "@nextui-org/alert";
 
 import styles from "./ContactForm.module.scss";
 
 const ContactForm: React.FC = () => {
+  const [isSuccessAlertVisible, setIsSuccessAlertVisible] = useState(false);
+
+  function showSuccessAlert() {
+    setIsSuccessAlertVisible(true);
+    setTimeout(() => {
+      hideSuccessAlert();
+    }, 8000);
+  }
+
+  function hideSuccessAlert() {
+    setIsSuccessAlertVisible(false);
+  }
+
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -30,8 +44,11 @@ const ContactForm: React.FC = () => {
       designation: Yup.string(),
       message: Yup.string(),
     }),
-    onSubmit: async (values) => {
-      console.log("values", values);
+    onSubmit: async (values, { resetForm }) => {
+      // console.log("values", values);
+      showSuccessAlert();
+      // reset the form
+      resetForm();
       // TODO: need to connect to API or email service to send the form data
 
       // try {
@@ -230,6 +247,15 @@ const ContactForm: React.FC = () => {
             >
               <span className="text-white">Submit</span>
             </Button>
+          </div>
+          <div className={styles.alertContainer}>
+            <Alert
+              color="success"
+              isVisible={isSuccessAlertVisible}
+              title="We have received your message and will get back to you soon."
+              variant="faded"
+              onClose={hideSuccessAlert}
+            />
           </div>
         </div>
       </div>

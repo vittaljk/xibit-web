@@ -11,14 +11,7 @@ interface IImageProps {
 }
 
 function Image(props: IImageProps) {
-  const {
-    path,
-    alt,
-    width = "100%",
-    height = "100%",
-    crop,
-    lazy = true,
-  } = props;
+  const { path, alt, lazy = true } = props;
 
   // Cloudinary transformations
   //   const transformations = [

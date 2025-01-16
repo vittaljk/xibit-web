@@ -1,8 +1,6 @@
 .aboutUsWrapper {
     @apply md:container md:mx-auto md:px-4 md:py-16;
     .aboutUsTitle {
-        @apply text-4xl font-bold mb-4 md:mb-8;
-    }
-    .aboutUsContainer {
+        @apply mt-5 md:mt-0 mx-5 md:mx-0 text-4xl font-bold mb-0 md:mb-8;
     }
 }

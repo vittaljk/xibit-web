@@ -91,6 +91,7 @@ function ImageGallery({ imageGallery }: ImageGalleryProps) {
                     activeIndex={activeIndex}
                     autoPlay={false}
                     carouselItems={imageGallery.map((image) => ({
+                      id: image.id,
                       imagePath: image.path,
                       title: image.title || "",
                     }))}
