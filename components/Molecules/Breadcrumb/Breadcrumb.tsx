@@ -2,6 +2,8 @@ import { Breadcrumbs, BreadcrumbItem } from "@nextui-org/breadcrumbs";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
+import { projects } from "@/data";
+
 function Breadcrumb() {
   const router = useRouter();
 
@@ -11,11 +13,23 @@ function Breadcrumb() {
   // Use `router.pathname` to identify dynamic segments
   const pathSegments = router.pathname.split("/").filter((segment) => segment);
 
+  // Helper to get the project name by ID
+  const getProjectNameById = (id: string) => {
+    const project = projects.find((p) => p.id === id);
+
+    return project ? project.name : id; // Fallback to the ID if the name is unavailable
+  };
+
   // Helper to construct the display name for each breadcrumb item
   const getBreadcrumbName = (segment: string) => {
     // Replace dynamic keys like `[id]` with actual values from `router.query`
     if (segment.startsWith("[") && segment.endsWith("]")) {
       const paramName = segment.slice(1, -1); // Extract the parameter name (e.g., `id`)
+
+      // Check if the segment corresponds to a project ID
+      if (paramName === "id" && typeof router.query[paramName] === "string") {
+        return getProjectNameById(router.query[paramName]); // Replace ID with name
+      }
 
       return typeof router.query[paramName] === "string"
         ? router.query[paramName]

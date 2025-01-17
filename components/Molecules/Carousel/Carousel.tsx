@@ -37,7 +37,6 @@ function Carousel(prop: ICarouselProps) {
           key={index}
           className={`${styles.carouselWrapper} ${styles[heightClass]}`}
         >
-          {/* <Atoms.Image lazy={lazyLoadImages} path={carouselItem.imagePath} /> */}
           <img
             alt="project"
             className={styles.carouselImage}

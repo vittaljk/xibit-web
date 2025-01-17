@@ -68,7 +68,7 @@ function ImageGallery({ imageGallery }: ImageGalleryProps) {
             data-aos="fade-up"
             onClick={() => handleImageClick(index)}
           >
-            <Atoms.Image lazy={true} path={image.path} />
+            <Atoms.Image path={image.path} />
             {image.title && <p className={styles.title}>{image.title}</p>}
           </div>
         ))}
@@ -96,7 +96,6 @@ function ImageGallery({ imageGallery }: ImageGalleryProps) {
                       title: image.title || "",
                     }))}
                     heightClass="full"
-                    lazyLoadImages={true}
                     showArrows={true}
                   />
                 </Suspense>
