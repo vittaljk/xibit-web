@@ -13,7 +13,7 @@ const ProjectPage = (props: { project: IProject }) => {
   }
 
   return (
-    <Templates.Layout>
+    <Templates.Layout pageTitle={project.name}>
       <Templates.Project project={project} />
     </Templates.Layout>
   );

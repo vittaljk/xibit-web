@@ -5,7 +5,7 @@ import { aboutUsCarouselItems } from "@/data";
 
 export default function About() {
   return (
-    <Templates.Layout>
+    <Templates.Layout pageTitle="About x'ibit">
       <Molecules.Carousel carouselItems={aboutUsCarouselItems} />
       <Atoms.AboutUs />
       <Molecules.ContactForm />

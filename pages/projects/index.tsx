@@ -3,7 +3,7 @@ import * as Organisms from "@/components/Organisms";
 
 const ProjectsList = () => {
   return (
-    <Templates.Layout>
+    <Templates.Layout pageTitle="Projects">
       <Organisms.Projects />
     </Templates.Layout>
   );

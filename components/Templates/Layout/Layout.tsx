@@ -11,14 +11,15 @@ import { SplashScreen } from "@/components/Molecules";
 
 interface LayoutProps {
   children: ReactNode;
+  pageTitle?: string;
 }
 
 function Layout(props: LayoutProps) {
-  const { children } = props;
+  const { children, pageTitle } = props;
 
   return (
     <div className={styles.layoutContainer}>
-      <Head />
+      <Head pageTitle={pageTitle} />
       <SplashScreen />
       <Organisms.Header />
       <div>

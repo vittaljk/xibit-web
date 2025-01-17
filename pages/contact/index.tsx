@@ -3,7 +3,7 @@ import * as Molecules from "@/components/Molecules";
 
 export default function Contact() {
   return (
-    <Templates.Layout>
+    <Templates.Layout pageTitle="Contact Us">
       <Molecules.ContactForm />
     </Templates.Layout>
   );
