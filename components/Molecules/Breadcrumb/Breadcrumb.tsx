@@ -1,4 +1,4 @@
-import { Breadcrumbs, BreadcrumbItem } from "@nextui-org/breadcrumbs";
+import { Breadcrumbs, BreadcrumbItem } from "@heroui/breadcrumbs";
 import Link from "next/link";
 import { useRouter } from "next/router";
 

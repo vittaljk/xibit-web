@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { Button } from "@nextui-org/button";
-import { Input, Textarea } from "@nextui-org/input";
-import { Alert } from "@nextui-org/alert";
+import { Button } from "@heroui/button";
+import { Input, Textarea } from "@heroui/input";
+import { Alert } from "@heroui/alert";
 
 import styles from "./ContactForm.module.scss";
 

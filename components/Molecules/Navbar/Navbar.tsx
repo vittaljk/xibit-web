@@ -3,7 +3,7 @@ import {
   DropdownTrigger,
   DropdownMenu,
   DropdownItem,
-} from "@nextui-org/dropdown";
+} from "@heroui/dropdown";
 import { useRouter } from "next/router";
 
 import { HamMenuIcon } from "@/components/icons";
