@@ -45,36 +45,33 @@ const ContactForm: React.FC = () => {
       message: Yup.string(),
     }),
     onSubmit: async (values, { resetForm }) => {
-      // console.log("values", values);
-      showSuccessAlert();
-      // reset the form
-      resetForm();
-      // TODO: need to connect to API or email service to send the form data
+      // // console.log("values", values);
+      // showSuccessAlert();
+      // // reset the form
+      // resetForm();
+      // // TODO: need to connect to API or email service to send the form data
+      console.log("values", values);
+      try {
+        const response = await fetch("/.netlify/functions/sendContactEmail", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        });
 
-      // try {
-      //   const response = await fetch("/api/contact", {
-      //     method: "POST",
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //     body: JSON.stringify(values),
-      //   });
+        const result = await response.json();
 
-      //   if (!response.ok) {
-      //     const errorData = await response.json();
-
-      //     console.error("Error:", errorData);
-      //     alert(
-      //       "Failed to submit form: " + (errorData.message || "Unknown error"),
-      //     );
-      //   } else {
-      //     const responseData = await response.json();
-
-      //     console.log("Success:", responseData);
-      //   }
-      // } catch (error) {
-      //   console.error("Error:", error);
-      // }
+        if (response.ok) {
+          console.log("Email sent successfully:", result.message);
+          showSuccessAlert();
+          resetForm(); // Reset the form after successful submission
+        } else {
+          console.error("Failed to send email:", result.message);
+        }
+      } catch (error) {
+        console.error("Error submitting form:", error);
+      }
     },
   });
 
@@ -97,7 +94,7 @@ const ContactForm: React.FC = () => {
             <div className="flex gap-2 items-center">
               <p className="font-bold text-sm">Write to us at:</p>
               <p className="text-xs text-linkHover">
-                <a href="mailto:contact@xibit.homes">contact@xibit.homes</a>
+                <a href="mailto:reachus@xibit.homes">reachus@xibit.homes</a>
               </p>
             </div>
           </div>
