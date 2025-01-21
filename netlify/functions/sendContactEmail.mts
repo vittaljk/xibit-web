@@ -1,44 +1,59 @@
 const nodemailer = require("nodemailer");
 
 exports.handler = async (event) => {
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ message: "Email sent successfully!" }),
-  };
-  // try {
-  //   const data = JSON.parse(event.body); // Extract form data
-  //   const { name, email, message } = data;
-  //   // Configure the SMTP transporter
-  //   const transporter = nodemailer.createTransport({
-  //     host: "smtp.yourdomain.com", // Replace with your SMTP server
-  //     port: 587, // Common SMTP port
-  //     secure: false, // True for port 465, false for 587
-  //     auth: {
-  //       user: "info@wtfit.co.in", // Your email
-  //       pass: "your-email-password", // Your email password (or app password)
-  //     },
-  //   });
-  //   // Email content
-  //   const mailOptions = {
-  //     from: `"Contact Form" <info@wtfit.co.in>`, // Sender address
-  //     to: "info@wtfit.co.in", // Recipient address
-  //     subject: "New Contact Form Submission",
-  //     text: `You have a new message from ${name} (${email}):\n\n${message}`,
-  //   };
-  //   // Send the email
-  //   await transporter.sendMail(mailOptions);
-  //   return {
-  //     statusCode: 200,
-  //     body: JSON.stringify({ message: "Email sent successfully!" }),
-  //   };
-  // } catch (error) {
-  //   console.error("Error sending email:", error);
-  //   return {
-  //     statusCode: 500,
-  //     body: JSON.stringify({
-  //       message: "Failed to send email.",
-  //       error: error.message,
-  //     }),
-  //   };
-  // }
+  try {
+    const data = JSON.parse(event.body);
+    const {
+      firstName,
+      lastName,
+      handPhone,
+      companyName,
+      designation,
+      email,
+      message,
+    } = data;
+
+    const transporter = nodemailer.createTransport({
+      host: "smtp.zoho.in",
+      port: 465,
+      secure: true,
+      auth: {
+        user: "reachus@xibit.homes",
+        pass: process.env.ZOHO_EMAIL_PASSWORD,
+      },
+    });
+
+    const mailOptions = {
+      from: `"Contact Form" <reachus@xibit.homes>`,
+      to: "reachus@xibit.homes",
+      subject: "New Contact Form Submission",
+      text:
+        `You have received a new message from the contact form:\n\n` +
+        `First Name: ${firstName}\n` +
+        `Last Name: ${lastName}\n` +
+        `Email: ${email}\n` +
+        `Phone Number: ${handPhone}\n` +
+        `Company Name: ${companyName}\n` +
+        `Designation: ${designation}\n\n` +
+        `Message:\n${message}`,
+    };
+
+    // Send the email
+    await transporter.sendMail(mailOptions);
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ message: "Email sent successfully!" }),
+    };
+  } catch (error) {
+    console.error("Error sending email:", error);
+
+    return {
+      statusCode: 500,
+      body: JSON.stringify({
+        message: "Failed to send email.",
+        error: error.message,
+      }),
+    };
+  }
 };
