@@ -92,7 +92,7 @@ export const projects: IProject[] = [
       },
       {
         id: "21",
-        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736618729/21_mpea9f.jpg",
+        path: "https://res.cloudinary.com/drpiqazgu/image/upload/v1737036281/21_mpea9f_vunrkr.jpg",
       },
     ],
     description: [
@@ -148,7 +148,7 @@ export const projects: IProject[] = [
       },
       {
         id: "6",
-        path: "https://res.cloudinary.com/djjr9qr9p/image/upload/v1736619212/6_igcbor.jpg",
+        path: "https://res.cloudinary.com/drpiqazgu/image/upload/v1737036335/6_igcbor_nkugqi.jpg",
       },
       {
         id: "7",
