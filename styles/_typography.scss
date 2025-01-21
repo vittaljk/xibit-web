@@ -2,5 +2,7 @@
   html,
   body {
     @apply font-sans;
+    // TODO: remove this line
+    display: none;
   }
 }
