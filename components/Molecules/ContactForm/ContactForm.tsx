@@ -45,12 +45,6 @@ const ContactForm: React.FC = () => {
       message: Yup.string(),
     }),
     onSubmit: async (values, { resetForm }) => {
-      // // console.log("values", values);
-      // showSuccessAlert();
-      // // reset the form
-      // resetForm();
-      // // TODO: need to connect to API or email service to send the form data
-      console.log("values", values);
       try {
         const response = await fetch("/.netlify/functions/sendContactEmail", {
           method: "POST",
@@ -63,7 +57,6 @@ const ContactForm: React.FC = () => {
         const result = await response.json();
 
         if (response.ok) {
-          console.log("Email sent successfully:", result.message);
           showSuccessAlert();
           resetForm(); // Reset the form after successful submission
         } else {
@@ -81,9 +74,8 @@ const ContactForm: React.FC = () => {
         <div>
           <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
 
-          <p className="font-extrabold text-lg  flex items-center space-x-2">
-            <span>✨</span> <span>Where Design Meets Impeccable Execution</span>{" "}
-            <span>✨</span>
+          <p className="text-lg  flex items-center space-x-2">
+            <span>Where Design Meets Impeccable Execution</span>
           </p>
 
           <div className="py-4">

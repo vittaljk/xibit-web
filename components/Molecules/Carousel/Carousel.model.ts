@@ -10,4 +10,6 @@ export interface ICarouselProps {
   infiniteLoop?: boolean;
   heightClass?: string;
   lazyLoadImages?: boolean;
+  overlayBackground?: boolean;
+  imageObjectFit?: "cover" | "contain";
 }

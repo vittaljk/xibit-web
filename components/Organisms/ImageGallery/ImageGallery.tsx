@@ -96,6 +96,8 @@ function ImageGallery({ imageGallery }: ImageGalleryProps) {
                       title: image.title || "",
                     }))}
                     heightClass="full"
+                    imageObjectFit="contain"
+                    overlayBackground={false}
                     showArrows={true}
                   />
                 </Suspense>
