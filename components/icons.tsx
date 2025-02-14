@@ -20,7 +20,7 @@ export const LeftArrow: React.FC<IconSvgProps> = ({
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <polyline points="9 18 15 12 9 6" />
+    <polyline points="15 18 9 12 15 6" />
   </svg>
 );
 
